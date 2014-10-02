@@ -1,13 +1,16 @@
 Depot::Application.routes.draw do
+  get "store/index"
   resources :tests
 
   resources :products
+
+  root :to => 'store#index', :as => 'store'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'products#index'
+   #root 'products#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
